@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="in.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="in.css" />
     <title>Portfolio</title>
 </head>
-<body> 
+<body>
     <header>
         <nav>
-            <div class="hamburger" onclick="toggleNav()">
-                &#9776; 
-            </div>
+            <div class="hamburger" onclick="toggleNav()">&#9776;</div>
             <div class="nav-links">
                 <a href="#" class="active">Home</a>
                 <a href="about.html">About</a>
@@ -21,7 +19,7 @@
             </div>
         </nav>
     </header>
-    
+
     <main>
         <section class="hero">
             <h1>JOAQUIN JUANICO</h1>
@@ -29,21 +27,25 @@
         </section>
 
         <section class="content">
-            <img src="waaat(2).jpg" alt="example" class="responsive-image">
+            <img src="itsme.jpg" alt="Profile Image" class="responsive-image fancy-image" />
+            <h2 class="welcome-title">Welcome to My Portfolio</h2>
+            <p class="welcome-text">
+                Explore my projects, learn about my background, and discover the work 
+                I've built over time. This portfolio is a reflection of my dedication 
+                to growth, learning, and creativity.
+            </p>
         </section>
     </main>
 
     <footer>
-        <p>2025, Joaquin Juanico</p>
+        <p>by Joaquin Juanico • 2025</p>
     </footer>
-
 
     <script>
         function toggleNav() {
             const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active'); 
+            navLinks.classList.toggle('active');
         }
-        </script>
-
+    </script>
 </body>
 </html>

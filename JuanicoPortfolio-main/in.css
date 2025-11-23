@@ -1,115 +1,136 @@
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: "Arial", sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #e6f2ff 0%, #b3d9ff 100%);
-    color: #333;
-    font-size: 16px;
+    background: linear-gradient(135deg, #4b0082, #a066d7);
+    color: #fff;
 }
 
 header {
-    background: linear-gradient(135deg, #003366 0%, #0056b3 100%);
-    color: #ffffff;
-    padding: 30px 0;
+    background: #2d004d;
+    padding: 25px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-
-.logo {
-    font-size: 2.5em;
-    font-family: 'Madimi One', cursive;
-    text-decoration: none;
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-
 
 nav {
-    margin-top: 15px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
 }
 
 nav a {
     color: white;
-    margin: 0 20px;
     text-decoration: none;
-    position: relative;
-    padding: 10px 15px;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    border-radius: 5px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
-nav a::after {
-    content: '';
-    display: block;
-    height: 3px;
-    background: #ffffff;
-    width: 0;
-    transition: width 0.3s ease;
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    transform: translateX(-50%);
+nav a:hover {
+    background: #a066d7;
+    transform: scale(1.15) translateY(-3px);
+    box-shadow: 0 0 12px rgba(160, 102, 215, 0.9),
+                0 0 20px rgba(255, 255, 255, 0.6);
 }
 
-
-
-.hero {
-    background: linear-gradient(135deg, #006699 0%, #007bff 100%);
-    padding: 60px 20px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+nav a.active:hover {
+    background: #a066d7;
+    transform: scale(1.15) translateY(-3px);
+    box-shadow: 0 0 12px rgba(160, 102, 215, 0.9), 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
-.hero h1 {
-    font-size: 2.5em;
-    margin: 0;
-    color: #ffffff;
-    font-family: 'Lobster', cursive;
-    font-weight: bold;
-}
-
-.hero p {
-    font-size: 1.2em;
-    margin: 15px 0 0;
-    color: #f0f8ff;
-    font-family: 'Lobster', cursive;
-}
-
-.content {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
-    transition: transform 0.3s ease;
-}
-
-
-
-
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background: linear-gradient(135deg, #003366 0%, #0056b3 100%);
-    color: #ffffff;
-    font-size: 0.9em;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+/* Ensure active link still gets hover animation */
+nav a.active:hover {
+    background: #a066d7;
+    transform: scale(1.15) translateY(-3px);
+    box-shadow: 0 0 12px rgba(160, 102, 215, 0.9), 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
 .hamburger {
     display: none;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
-    color: #ffffff;
-    transition: color 0.3s ease;
+    color: white;
 }
 
+.hero {
+    padding: 70px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #6b0faf, #9a4fff);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
 
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.hero p {
+    font-size: 1.3em;
+    opacity: 0.9;
+}
+
+.content {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.responsive-image {
+    width: 60%;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.fancy-image {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+.fancy-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+.welcome-title {
+    font-size: 1.8em;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.welcome-text {
+    font-size: 1.1em;
+    color: #f5eaff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2d004d;
+    color: white;
+    margin-top: 40px;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .responsive-image {
+        width: 80%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
