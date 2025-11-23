@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -19,6 +20,7 @@
   </header>
 
   <main>
+
     <section class="about-section">
       <div class="about-container">
         <div class="about-image">
@@ -34,8 +36,12 @@
           </div>
         </div>
       </div>
+
+
+      <button class="show-contact-btn">Send Me a Message</button>
     </section>
 
+  
     <section class="contact-form-section">
       <h2>Send Me a Message</h2>
       <form action="#" method="post" class="contact-form">
@@ -59,5 +65,22 @@
   <footer>
     <p>&copy; 2024 by Joaquin Juanico</p>
   </footer>
+
+
+  <script>
+    const showBtn = document.querySelector('.show-contact-btn');
+    const contactFormSection = document.querySelector('.contact-form-section');
+
+    showBtn.addEventListener('click', () => {
+      if (contactFormSection.style.display === 'block') {
+        contactFormSection.style.display = 'none';
+      } else {
+        contactFormSection.style.display = 'block';
+        contactFormSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  </script>
 </body>
 </html>
+
+

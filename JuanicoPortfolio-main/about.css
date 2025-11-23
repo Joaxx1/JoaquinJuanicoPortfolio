@@ -36,12 +36,6 @@ nav a:hover {
               0 0 20px rgba(255, 255, 255, 0.6);
 }
 
-nav a.active:hover {
-  background: #a066d7;
-  transform: scale(1.15) translateY(-3px);
-  box-shadow: 0 0 12px rgba(160, 102, 215, 0.9),
-              0 0 20px rgba(255, 255, 255, 0.6);
-}
 
 .about-section {
   padding: 60px 20px;
@@ -49,47 +43,42 @@ nav a.active:hover {
 
 .about-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  gap: 40px;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
 .about-image img {
-  width: 350px; 
+  width: 400px;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .about-image img:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
 }
 
 .about-text {
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .about-text h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 2.5em;
+  margin-bottom: 25px;
 }
 
 .about-text p {
-  font-size: 1.1em;
-  line-height: 1.6;
+  font-size: 1.2em;
+  line-height: 1.8;
   color: #f5eaff;
 }
 
-* {
-  box-sizing: border-box;
-}
 
-/* Contact Form */
 .contact-form-section {
+  display: none;
   background: rgba(255, 255, 255, 0.05);
   padding: 50px 20px;
   text-align: left;
@@ -154,6 +143,27 @@ nav a.active:hover {
   box-shadow: 0 0 20px rgba(160, 102, 215, 0.9);
 }
 
+
+.show-contact-btn {
+  display: block;
+  margin: 40px auto 0;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 10px;
+  background: #a066d7;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.show-contact-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(160, 102, 215, 0.9);
+}
+
+
 footer {
   text-align: center;
   padding: 20px;
@@ -163,15 +173,21 @@ footer {
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
 }
 
+
 @media (max-width: 900px) {
   .about-container {
     flex-direction: column;
     gap: 30px;
+    text-align: center;
   }
 
   .about-image img {
-    width: 60%;
-    min-width: 250px; 
+    width: 70%;
+    max-width: 350px;
+  }
+
+  .about-text {
+    max-width: 90%;
   }
 }
 
