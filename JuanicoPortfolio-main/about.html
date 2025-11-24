@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,77 +10,154 @@
   <link rel="stylesheet" href="about.css">
   <title>About Me</title>
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header>
     <h1>About Me</h1>
     <nav>
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
+      <a href="about.html" class="active">About</a>
     </nav>
   </header>
 
+  <!-- ABOUT SECTION -->
   <main>
-
     <section class="about-section">
       <div class="about-container">
+
+        <!-- IMAGE -->
         <div class="about-image">
-          <img src="anotherme.jpg" alt="Joaquin Juanico" class="fancy-image">
+          <img src="anotherme.jpg" alt="Joaquin Juanico">
         </div>
+
+        <!-- TEXT -->
         <div class="about-text">
           <h2>Hello! I'm Joaquin Juanico</h2>
-          <p>I'm a passionate web developer with a love for creating beautiful and functional websites. My journey in web development began several years ago, and since then, I've honed my skills in HTML, CSS, JavaScript, and more. I strive to build interactive and visually appealing experiences for users.</p>
-          <div class="contact-info">
-            <p><strong>Phone:</strong> 0917-859-2707</p>
-            <p><strong>Email:</strong> <a href="mailto:joaquin.juanico@ciit.edu.ph">joaquin.juanico@ciit.edu.ph</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/joaquinjuanico" target="_blank" rel="noopener">linkedin.com/in/joaquinjuanico</a></p>
-          </div>
+
+          <p>
+            I hold a Bachelor of Science in Computer Science from CIIT College of Arts and Technology.
+            I’m passionate about web development, with a deep appreciation for crafting websites that
+            are both visually appealing and highly functional.
+          </p>
+
+          <p>
+            My journey began three years ago, and since then I’ve continuously honed my skills in HTML,
+            CSS, JavaScript, and modern web technologies. I love creating interactive, seamless, and
+            meaningful user experiences.
+          </p>
+
+          <p>
+            I am also highly interested in Artificial Intelligence. Although still at the beginning of my
+            AI journey, I look forward to expanding my knowledge in machine learning and exploring how
+            AI can be used creatively and practically.
+          </p>
         </div>
       </div>
 
+      <!-- STRENGTHS & WEAKNESSES -->
+      <div class="traits-section">
+        <div class="trait-card">
+          <h3>Strengths</h3>
+          <ul>
+            <li>Nigga</li>
+            <li>Nigga</li>
+            <li>Nigga</li>
+            <li>Nigga</li>
+          </ul>
+        </div>
 
-      <button class="show-contact-btn">Send Me a Message</button>
+        <div class="trait-card">
+          <h3>Weaknesses</h3>
+          <ul>
+            <li>Nigga</li>
+            <li>Nigga</li>
+            <li>Nigga</li>
+          </ul>
+        </div>
+      </div>
+
     </section>
 
-  
-    <section class="contact-form-section">
-      <h2>Send Me a Message</h2>
-      <form action="#" method="post" class="contact-form">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
+    <!-- CONTACT BOX (UPDATED) -->
+    <section class="footer-contact-panel">
+      <div class="contact-box">
+
+        <h3>Contact & Message</h3>
+
+        <div class="contact-item" data-copy="0917-859-2707">
+          <span class="icon">📱</span>
+          <span class="info">0917-859-2707</span>
         </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
+
+        <div class="contact-item" data-copy="joaquin.juanico@ciit.edu.ph">
+          <span class="icon">📧</span>
+          <span class="info">joaquin.juanico@ciit.edu.ph</span>
         </div>
-        <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" placeholder="Enter your message here..." required></textarea>
+
+        <div class="contact-item" data-copy="https://linkedin.com/in/joaquinjuanico">
+          <span class="icon">🔒</span>
+          <span class="info">linkedin.com/in/joaquinjuanico</span>
         </div>
-        <button type="submit">Send Message</button>
-      </form>
+
+        <button class="message-btn show-contact-btn">Send Me a Message</button>
+
+        <div class="contact-form-section" style="display: none;">
+          <form action="#" method="post" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Enter your message here..."></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
+      </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2024 by Joaquin Juanico</p>
   </footer>
 
-
+  <!-- SCRIPTS -->
   <script>
     const showBtn = document.querySelector('.show-contact-btn');
     const contactFormSection = document.querySelector('.contact-form-section');
 
     showBtn.addEventListener('click', () => {
+      contactFormSection.style.display =
+        contactFormSection.style.display === 'block' ? 'none' : 'block';
+
       if (contactFormSection.style.display === 'block') {
-        contactFormSection.style.display = 'none';
-      } else {
-        contactFormSection.style.display = 'block';
         contactFormSection.scrollIntoView({ behavior: 'smooth' });
       }
     });
+
+    document.querySelectorAll('.contact-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const textToCopy = item.getAttribute('data-copy');
+        navigator.clipboard.writeText(textToCopy);
+
+        item.classList.add('copied');
+        setTimeout(() => item.classList.remove('copied'), 1000);
+      });
+    });
   </script>
+
 </body>
 </html>
-
-

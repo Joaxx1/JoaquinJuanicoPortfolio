@@ -1,3 +1,4 @@
+
 body {
     font-family: "Arial", sans-serif;
     margin: 0;
@@ -29,6 +30,7 @@ nav a {
     transition: 0.3s ease;
 }
 
+
 nav a:hover {
     background: #a066d7;
     transform: scale(1.15) translateY(-3px);
@@ -36,25 +38,7 @@ nav a:hover {
                 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
-nav a.active:hover {
-    background: #a066d7;
-    transform: scale(1.15) translateY(-3px);
-    box-shadow: 0 0 12px rgba(160, 102, 215, 0.9), 0 0 20px rgba(255, 255, 255, 0.6);
-}
 
-/* Ensure active link still gets hover animation */
-nav a.active:hover {
-    background: #a066d7;
-    transform: scale(1.15) translateY(-3px);
-    box-shadow: 0 0 12px rgba(160, 102, 215, 0.9), 0 0 20px rgba(255, 255, 255, 0.6);
-}
-
-.hamburger {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: white;
-}
 
 .hero {
     padding: 70px 20px;
@@ -75,6 +59,7 @@ nav a.active:hover {
     opacity: 0.9;
 }
 
+
 .content {
     max-width: 650px;
     margin: 40px auto;
@@ -86,22 +71,35 @@ nav a.active:hover {
     text-align: center;
 }
 
+
 .responsive-image {
     width: 60%;
     border-radius: 15px;
     display: block;
     margin: 0 auto 20px auto;
+
+
+    transition: 0.4s ease;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
 }
 
+
+.responsive-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+
 .fancy-image {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: 0.4s ease;
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
 }
 
 .fancy-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
 }
+
 
 .welcome-title {
     font-size: 1.8em;
@@ -114,6 +112,7 @@ nav a.active:hover {
     color: #f5eaff;
 }
 
+
 footer {
     text-align: center;
     padding: 20px;
@@ -123,6 +122,7 @@ footer {
     font-size: 0.9em;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
 }
+
 
 @media (max-width: 768px) {
     .responsive-image {
