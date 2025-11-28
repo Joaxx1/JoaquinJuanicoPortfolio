@@ -22,7 +22,8 @@ header h1 {
     font-weight: bold;
 }
 
-/* ===== NAV ===== */nav {
+
+nav {
     margin-top: 15px;
     display: flex;
     justify-content: center;
@@ -39,7 +40,7 @@ nav a {
     transition: 0.3s ease;
 }
 
-/* MATCHED HOVER EFFECT */
+
 nav a:hover,
 nav a.active:hover {
     background: #a066d7;
@@ -49,7 +50,7 @@ nav a.active:hover {
         0 0 20px rgba(255, 255, 255, 0.6);
 }
 
-/* ===== MAIN ===== */
+
 main {
     padding: 50px 20px;
     display: flex;
@@ -57,7 +58,7 @@ main {
     align-items: center;
 }
 
-/* ===== PROJECTS SECTION ===== */
+
 .projects {
     display: flex;
     flex-direction: column;
@@ -66,7 +67,7 @@ main {
     max-width: 1100px;
 }
 
-/* Project row wrapper */
+
 .project-row {
     display: flex;
     flex-wrap: wrap;
@@ -79,7 +80,7 @@ main {
     backdrop-filter: blur(8px);
 }
 
-/* Individual card */
+
 .project-card {
     background: rgba(255, 255, 255, 0.15);
     padding: 18px;
@@ -90,7 +91,7 @@ main {
     transition: 0.35s ease;
 }
 
-/* MATCHED CARD HOVER EFFECT */
+
 .project-card:hover {
     transform: scale(1.1);
     box-shadow: 
@@ -98,7 +99,7 @@ main {
         0 0 15px rgba(160, 102, 215, 0.7);
 }
 
-/* Images */
+
 .project-image {
     width: 100%;
     border-radius: 10px;
@@ -114,14 +115,14 @@ main {
         0 0 25px rgba(255, 255, 255, 0.7);
 }
 
-/* Headings */
+
 h2 {
     color: #ffebff;
     margin-bottom: 10px;
     text-align: center;
 }
 
-/* ===== FOOTER ===== */
+
 footer {
     text-align: center;
     padding: 20px;
@@ -132,7 +133,7 @@ footer {
     margin-top: 60px;
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
     .project-card {
         width: 80%;

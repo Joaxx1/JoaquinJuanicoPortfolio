@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +11,6 @@
 </head>
 
 <body>
-
-  <!-- HEADER -->
   <header>
     <h1>About Me</h1>
     <nav>
@@ -23,32 +20,37 @@
     </nav>
   </header>
 
-  <!-- ABOUT SECTION -->
   <main>
     <section class="about-section">
       <div class="about-container">
 
-        <!-- IMAGE -->
-        <div class="about-image">
-          <img src="anotherme.jpg" alt="Joaquin Juanico">
+
+        <div class="about-image-wrapper">
+          <div class="about-image">
+            <img src="anotherme.jpg" alt="Joaquin Juanico">
+          </div>
+
+          <div class="button-group">
+            <button class="button type1" id="moreAboutBtn">
+              <span class="btn-txt">More About Me!</span>
+            </button>
+
+          </div>
         </div>
 
-        <!-- TEXT -->
+
         <div class="about-text">
           <h2>Hello! I'm Joaquin Juanico</h2>
-
           <p>
             I hold a Bachelor of Science in Computer Science from CIIT College of Arts and Technology.
-            I’m passionate about web development, with a deep appreciation for crafting websites that
+            I'm passionate about web development, with a deep appreciation for crafting websites that
             are both visually appealing and highly functional.
           </p>
-
           <p>
-            My journey began three years ago, and since then I’ve continuously honed my skills in HTML,
+            My journey began three years ago, and since then I've continuously honed my skills in HTML,
             CSS, JavaScript, and modern web technologies. I love creating interactive, seamless, and
             meaningful user experiences.
           </p>
-
           <p>
             I am also highly interested in Artificial Intelligence. Although still at the beginning of my
             AI journey, I look forward to expanding my knowledge in machine learning and exploring how
@@ -57,34 +59,50 @@
         </div>
       </div>
 
-      <!-- STRENGTHS & WEAKNESSES -->
+
       <div class="traits-section">
         <div class="trait-card">
-          <h3>Strengths</h3>
+          <h3>STRENGTHS</h3>
           <ul>
-            <li>Nigga</li>
-            <li>Nigga</li>
-            <li>Nigga</li>
-            <li>Nigga</li>
+            <li>Problem-solving</li>
+            <li>Attention to detail</li>
+            <li>Quick learner</li>
+            <li>Team collaboration</li>
           </ul>
         </div>
 
         <div class="trait-card">
-          <h3>Weaknesses</h3>
+          <h3>MISSION</h3>
           <ul>
-            <li>Nigga</li>
-            <li>Nigga</li>
-            <li>Nigga</li>
+            <p>To create impactful digital experiences that blend creativity with functionality.</p>
           </ul>
         </div>
       </div>
 
+
+      <div class="traits-section">
+        <div class="trait-card">
+          <h3>WEAKNESSES</h3>
+          <ul>
+            <li>Laziness</li>
+            <li>Overthinking</li>
+            <li>Time management</li>
+            <li>Public speaking</li>
+          </ul>
+        </div>
+
+        <div class="trait-card">
+          <h3>VISION</h3>
+          <ul>
+            <p>To become a leading web developer and AI enthusiast, contributing to innovative projects.</p>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <!-- CONTACT BOX (UPDATED) -->
+
     <section class="footer-contact-panel">
       <div class="contact-box">
-
         <h3>Contact & Message</h3>
 
         <div class="contact-item" data-copy="0917-859-2707">
@@ -124,17 +142,83 @@
             <button type="submit">Send Message</button>
           </form>
         </div>
-
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
+
+  <div id="moreAboutModal" class="modal">
+    <div class="modal-content">
+
+      <span class="close-modal">&times;</span>
+      <h2>More About Me</h2>
+
+      <div class="modal-body">
+
+        <div class="modal-section">
+          <h3>🎓 Education & Background</h3>
+          <p>
+            Taking <strong>Bachelor of Science in Computer Science</strong> in 
+            CIIT College of Arts and Technology. My academic journey has yet to start 
+            but being here will give me a a solid foundation in programming, algorithms, 
+            and software development principles.</p>
+        </div>
+
+        <div class="modal-section">
+          <h3>💻 Technical Skills</h3>
+          <ul>
+            <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Backend:</strong> Java, PHP,c++, Database Management</li>
+            <li><strong>Tools:</strong> GitHub, VS Code</li>
+            <li><strong>Currently Learning:</strong>AI Development</li>
+          </ul>
+        </div>
+
+        <div class="modal-section">
+          <h3>🚀 My Philosophy </h3>
+          <p>
+            <strong>BE A NI-</strong> , <strong>STAY A NI-</strong> , <strong>BE THE REAL NI-</strong>
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h3>🎯 Goals & Aspirations</h3>
+          <p>
+            My goal is to merge my web development expertise with artificial intelligence 
+            to create intelligent, user-centric applications. I'm particularly interested in 
+            how AI can enhance user experiences and solve real-world problems.
+          </p>
+        </div>
+
+
+        <div class="modal-section">
+          <h3>🌟 Motivation & Growth</h3>
+          <ul>
+              <p>
+                nothning yet 
+              </p>
+          </ul>
+        </div>
+
+        <div class="modal-section">
+          <h3>🌟 Fun Facts</h3>
+          <ul>
+            <li>I swim </li>
+            <li>I eat Shrimp, I die</li>
+            <li>I was white when I was young</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
   <footer>
-    <p>&copy; 2024 by Joaquin Juanico</p>
+    <p>© 2025 by Joaquin Juanico</p>
   </footer>
 
-  <!-- SCRIPTS -->
+
   <script>
     const showBtn = document.querySelector('.show-contact-btn');
     const contactFormSection = document.querySelector('.contact-form-section');
@@ -142,20 +226,48 @@
     showBtn.addEventListener('click', () => {
       contactFormSection.style.display =
         contactFormSection.style.display === 'block' ? 'none' : 'block';
-
       if (contactFormSection.style.display === 'block') {
         contactFormSection.scrollIntoView({ behavior: 'smooth' });
       }
     });
 
+
     document.querySelectorAll('.contact-item').forEach(item => {
       item.addEventListener('click', () => {
         const textToCopy = item.getAttribute('data-copy');
         navigator.clipboard.writeText(textToCopy);
-
         item.classList.add('copied');
         setTimeout(() => item.classList.remove('copied'), 1000);
       });
+    });
+
+
+    const modal = document.getElementById('moreAboutModal');
+    const moreAboutBtn = document.getElementById('moreAboutBtn');
+    const closeModal = document.querySelector('.close-modal');
+
+    moreAboutBtn.addEventListener('click', () => {
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal.style.display === 'block') {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
     });
   </script>
 
